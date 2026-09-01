@@ -6,7 +6,9 @@ A multi-page marketing website for **Ellahie Buksh & Sons Pharmacy** (Ebsons), O
 - Real product catalog (150 items) and 12 featured bestsellers, pulled from the pharmacy's live Shopify store (`ebsons.com.pk`) and checked into `assets/data/`.
 - Brand colors and logo taken directly from the pharmacy's own logo (navy `#083559`, red `#EF1D31`, amber `#F5A623` accent).
 - Poppins for display type, IBM Plex Mono for prices.
-- Search + category filtering, a category-dropdown nav with mobile drawer, scroll-reveal animations, hover/tilt effects, an auto-scrolling brand marquee and category ticker, and a WhatsApp ordering flow throughout.
+- Search + category filtering, a category-dropdown nav with mobile drawer, scroll-reveal animations, hover/tilt effects, an auto-scrolling brand marquee and category ticker.
+- A real client-side **cart** (localStorage-backed, no backend): "Add to cart" on every product card, a cart icon with live count in the header, a slide-in drawer with quantity controls, and checkout as one consolidated WhatsApp message — this is what "ordering" means on a static site with no payment backend.
+- Category-specific line icons (pill, droplet, leaf, pulse, comb, bottle, syringe) instead of flat lettering, used on the home category grid and the category page cards.
 - Light/dark mode aware (follows system preference).
 
 ## Project structure
@@ -20,9 +22,11 @@ category.html                 — Category template, reads ?cat=<slug> from cate
 assets/
   css/style.css                — all styling (design tokens + components), shared by every page
   js/nav.js                    — shared chrome: nav dropdown, mobile menu, footer links, scroll-reveal, FAQ
+  js/icons.js                  — shared SVG icon set (one per category, plus cart/check/plus)
+  js/cart.js                   — shared cart: localStorage, header badge, drawer, WhatsApp checkout
   js/home.js                   — home page: hero, ticker, category grid, featured products, marquee
   js/shop.js                   — shop page: search/filter over the full catalog
-  js/category.js               — category page: filters catalog.json by the ?cat= slug
+  js/category.js               — category page: filters catalog.json by the ?cat= slug, renders product cards
   img/logo.webp                 — the pharmacy's logo
   img/products/*.jpg           — featured product photos
   data/featured.json           — the 12 featured products (title, vendor, price, image)
@@ -30,7 +34,7 @@ assets/
   data/categories.json         — the 7 categories (slug, label, description, gradient, monogram, count)
 ```
 
-Every page loads `assets/js/nav.js` first, then its own page script. `nav.js` populates the "Products" dropdown and the footer's category links from `categories.json`, and exposes `window.setupReveal()` so page scripts can re-run the scroll-reveal observer after they finish rendering fetched data (needed because reveal elements inserted after the initial pass wouldn't otherwise be observed).
+Every page loads `assets/js/nav.js`, then `icons.js` and `cart.js`, then its own page script. `nav.js` populates the "Products" dropdown and the footer's category links from `categories.json`, and exposes `window.setupReveal()` so page scripts can re-run the scroll-reveal observer after they finish rendering fetched data (needed because reveal elements inserted after the initial pass wouldn't otherwise be observed). `cart.js` builds the cart button and drawer once per page and listens for clicks on any `[data-add-to-cart]` button anywhere in the document, so page scripts just need to render a button with `data-title`/`data-vendor`/`data-price` attributes — no per-page wiring required.
 
 ## Running locally
 
@@ -64,4 +68,4 @@ This is a static site — it deploys anywhere that serves static files:
 
 ## Ordering
 
-All "order" actions link to WhatsApp (`wa.me/923200202202`) with the product name pre-filled in the message — there's no cart or checkout on this site by design.
+Every product card has an "Add to cart" button. The cart lives in the browser's `localStorage` (key `ebsonsCart`) — there's no backend, no payment gateway, and no order history. The drawer's "Checkout on WhatsApp" button is the actual completion step: it builds one message listing every line item, quantity and the total, and opens `wa.me/923200202202` with it pre-filled.

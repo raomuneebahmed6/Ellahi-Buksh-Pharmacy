@@ -13,7 +13,7 @@ function renderCategoryGrid(categories) {
   grid.innerHTML = categories.map((c, i) => `
     <a class="category-card reveal" style="--delay:${(i % 3) * 0.08}s" href="category.html?cat=${c.slug}">
       <div class="cat-head" style="background:linear-gradient(135deg, ${c.gradient[0]}, ${c.gradient[1]})">
-        <div class="cat-letters">${c.monogram}</div>
+        <div class="cat-icon">${categoryIconSvg(c.slug, 34)}</div>
         <div class="cat-badge">${c.count} item${c.count === 1 ? '' : 's'}</div>
       </div>
       <div class="cat-body">
@@ -39,9 +39,9 @@ function renderFeatured(featured) {
         <h3>${p.title}</h3>
         <div class="product-foot">
           <span class="product-price">${fmtPrice(p.price)}</span>
-          <a class="mini-wa" href="${waLink(p.title)}" target="_blank" rel="noopener noreferrer" aria-label="Order ${p.title} on WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Z"/></svg>
-          </a>
+          <button class="mini-add-to-cart" data-add-to-cart data-title="${p.title.replace(/"/g, '&quot;')}" data-vendor="${p.vendor.replace(/"/g, '&quot;')}" data-price="${p.price}" aria-label="Add ${p.title} to cart">
+            ${uiIconSvg('plus', 15)}
+          </button>
         </div>
       </div>
     </div>

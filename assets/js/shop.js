@@ -51,7 +51,12 @@ async function initShop() {
           <div class="catalog-row-name">${p.title}</div>
           <div class="catalog-row-vendor">${p.vendor}</div>
         </div>
-        <div class="catalog-row-price">${fmtPrice(p.price)}</div>
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div class="catalog-row-price">${fmtPrice(p.price)}</div>
+          <button class="mini-add-to-cart" data-add-to-cart data-title="${p.title.replace(/"/g, '&quot;')}" data-vendor="${p.vendor.replace(/"/g, '&quot;')}" data-price="${p.price}" aria-label="Add ${p.title} to cart">
+            ${uiIconSvg('plus', 15)}
+          </button>
+        </div>
       </div>
     `).join('');
   }
