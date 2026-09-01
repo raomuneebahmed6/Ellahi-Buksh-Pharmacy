@@ -1,0 +1,74 @@
+[
+  {
+    "title": "ACCU CHEK INSTANT S SIMPLE  METER",
+    "vendor": "Ellahiebuksh",
+    "price": 3000.0,
+    "img": "assets/img/products/accu-chek-instant-s-simple-meter.jpg"
+  },
+  {
+    "title": "CERTEZA BM405 DIGITAL BP MONITOR",
+    "vendor": "Ellahiebuksh",
+    "price": 4800.0,
+    "img": "assets/img/products/certeza-bm405-digital-bp-monitor.jpg"
+  },
+  {
+    "title": "DIGITAL THERMOMETER (CERTEZA 707)",
+    "vendor": "Certeza",
+    "price": 450.0,
+    "img": "assets/img/products/digital-thermometer-certeza-707.jpg"
+  },
+  {
+    "title": "CERTEZA GL (110) GLUCOMETER",
+    "vendor": "Ellahiebuksh",
+    "price": 1800.0,
+    "img": "assets/img/products/certeza-gl-110-glucometer.jpg"
+  },
+  {
+    "title": "BIOTIN 5000MCG  ( NATURE \" S BEAUTY ) 72'S",
+    "vendor": "Ellahiebuksh",
+    "price": 4600.0,
+    "img": "assets/img/products/biotin-5000mcg-nature-s-beauty-72s.jpg"
+  },
+  {
+    "title": "D MAX CHEW TAB",
+    "vendor": "Ellahiebuksh",
+    "price": 814.0,
+    "img": "assets/img/products/d-max-chew-tab.jpg"
+  },
+  {
+    "title": "BIO FAD CREAM 30GM",
+    "vendor": "Ellahiebuksh",
+    "price": 1450.0,
+    "img": "assets/img/products/bio-fad-cream-30gm.jpg"
+  },
+  {
+    "title": "COSMELAN CREAM (30)GM",
+    "vendor": "Ellahiebuksh",
+    "price": 1495.0,
+    "img": "assets/img/products/cosmelan-cream-30gm.jpg"
+  },
+  {
+    "title": "KINDLE CREAM",
+    "vendor": "Ellahiebuksh",
+    "price": 1600.0,
+    "img": "assets/img/products/kindle-cream.jpg"
+  },
+  {
+    "title": "BREAST PUMP (MANUAL) IPSA     (6001)",
+    "vendor": "Ellahiebuksh",
+    "price": 3200.0,
+    "img": "assets/img/products/breast-pump-manual-ipsa-6001.jpg"
+  },
+  {
+    "title": "HAIR MAX 5% PLUS SOLUTION",
+    "vendor": "SANTE (PVT) LIMITED",
+    "price": 1070.0,
+    "img": "assets/img/products/hair-max-5-plus-solution.jpg"
+  },
+  {
+    "title": "HUMA PEN",
+    "vendor": "Ellahiebuksh",
+    "price": 4720.0,
+    "img": "assets/img/products/huma-pen.jpg"
+  }
+]
