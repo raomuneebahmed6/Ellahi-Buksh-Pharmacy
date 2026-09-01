@@ -4,28 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ellahie Buksh &amp; Sons Pharmacy</title>
-<meta name="description" content="Genuine medicines, medical devices, skincare and wellness products from Ellahie Buksh &amp; Sons Pharmacy. Browse the full catalog and order on WhatsApp.">
+<meta name="description" content="Genuine medicines, medical devices, skincare and wellness products from Ellahie Buksh &amp; Sons Pharmacy. Browse by category and order on WhatsApp.">
 <link rel="icon" href="assets/img/logo.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="#top" class="logo-link" aria-label="Ellahie Buksh & Sons Pharmacy">
+    <a href="index.html" class="logo-link" aria-label="Ellahie Buksh & Sons Pharmacy">
       <img src="assets/img/logo.webp" alt="Ellahie Buksh & Sons Pharmacy">
     </a>
-    <nav class="main-nav">
-      <a href="#featured">Bestsellers</a>
-      <a href="#shop">Shop all</a>
-      <a href="#brands">Brands</a>
-      <a href="#faq">FAQs</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <div class="nav-dropdown">
+        <a href="shop.html">Products<svg class="drop-caret" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+        <div class="drop-menu" id="navCatMenu"></div>
+      </div>
+      <a href="shop.html">Shop All</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a class="icon-btn" href="https://wa.me/923200202202" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Z"/></svg>
-    </a>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <a class="icon-btn" href="https://wa.me/923200202202" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Z"/></svg>
+      </a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -37,16 +45,16 @@
     </svg>
     <div class="wrap hero-inner">
       <div>
-        <span class="eyebrow"><i class="dot"></i>150+ products in stock</span>
+        <span class="eyebrow"><i class="dot"></i>Full pharmacy counter, online</span>
         <h1>Real medicine.<br>Real fast. <span>Zero fakes.</span></h1>
-        <p class="hero-sub">A full pharmacy counter — medicines, devices, skincare and more — sourced straight from the brands themselves, not a warehouse of guesses.</p>
+        <p class="hero-sub">Medicines, devices, skincare and more — sourced straight from the brands themselves, not a warehouse of guesses.</p>
         <div class="hero-actions">
-          <a class="btn btn-red" href="#shop">Browse the full range →</a>
+          <a class="btn btn-red" href="shop.html">Browse the full range →</a>
           <a class="btn btn-outline" style="color:#fff; border-color:rgba(255,255,255,.35);" href="#featured">See bestsellers</a>
         </div>
         <div class="hero-stats-row">
           <div><b id="statTotal">150+</b><span>Products listed</span></div>
-          <div><b>7</b><span>Categories covered</span></div>
+          <div><b>7</b><span>Categories</span></div>
           <div><b>15+</b><span>Brands stocked</span></div>
         </div>
       </div>
@@ -66,41 +74,37 @@
     </div>
   </section>
 
-  <section id="featured">
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Shop by category</span>
+        <h2>Find it <em>fast</em>, not by scrolling forever.</h2>
+        <p>Every category below links to its own page, filtered to exactly what's listed right now.</p>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <section id="featured" class="section-cream">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="kicker">Frequently reordered</span>
-        <h2>Twelve things people never let run out.</h2>
-        <p>A cross-section of what's actually moving off the shelf right now — devices, skincare, supplements.</p>
+        <h2>Twelve things people <em>never</em> let run out.</h2>
+        <p>A cross-section of what's actually moving off the shelf right now.</p>
       </div>
       <div class="product-grid" id="featuredGrid"></div>
     </div>
   </section>
 
-  <section id="shop" class="section-cream">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="kicker">The full catalog</span>
-        <h2>Search the shelf before you send a message.</h2>
-        <p>Every item currently listed, pulled straight from our inventory — filter by category or search by name.</p>
-      </div>
-      <div class="catalog-controls reveal">
-        <div class="search-box">
-          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m17 17-4-4"/></svg>
-          <input type="text" id="catalogSearch" placeholder="Search products…">
-        </div>
-      </div>
-      <div class="chip-row reveal" id="chipRow" style="margin-bottom:18px;"></div>
-      <div class="catalog-count reveal" id="catalogCount"></div>
-      <div class="catalog-list reveal" id="catalogList"></div>
-    </div>
-  </section>
-
-  <section id="brands">
+  <section>
     <div class="wrap">
       <div class="section-head reveal">
         <span class="kicker">On our shelves</span>
-        <h2>The brands behind what we stock.</h2>
+        <h2>Brands we <em>actually</em> stock.</h2>
       </div>
       <div class="marquee reveal" id="brandMarquee">
         <div class="marquee-track" id="marqueeTrack">
@@ -120,39 +124,42 @@
     </div>
   </section>
 
-  <section class="section-cream">
+  <section class="section-navy">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="kicker">The difference</span>
-        <h2>What decades behind the counter actually taught us.</h2>
+      <div class="section-head reveal" style="text-align:center; max-width:640px; margin-left:auto; margin-right:auto;">
+        <span class="kicker" style="justify-content:center;">The difference</span>
+        <h2>Built on stock, <em>not</em> excuses.</h2>
       </div>
-      <div class="feature-grid">
-        <div class="feature-card reveal" style="--delay:0s">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 2 3 5v5c0 4.5 3 7.5 7 8.5 4-1 7-4 7-8.5V5l-7-3Z"/><path d="m7 10 2 2 4-4"/></svg></div>
-          <h3>Sourced, not sold on</h3>
-          <p>Every batch is bought directly from the manufacturer or an authorised distributor — never from a grey-market reseller.</p>
-        </div>
-        <div class="feature-card reveal" style="--delay:.1s">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="14" height="11" rx="2"/><path d="M7 5V3.5a1.5 1.5 0 0 1 3 0V5M13 5V3.5"/></svg></div>
-          <h3>A pharmacist answers</h3>
-          <p>Questions about dosage or interactions are answered by trained staff, not a chatbot script.</p>
-        </div>
-        <div class="feature-card reveal" style="--delay:.2s">
-          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l3 2"/></svg></div>
-          <h3>Same-day, most days</h3>
-          <p>In-stock orders confirmed before mid-afternoon are usually out the door the same day.</p>
-        </div>
+      <div class="why-grid">
+        <div class="why-card reveal" style="--delay:0s"><div class="why-icon">💊</div><h3>Genuine, always</h3><p>Every batch bought directly from the manufacturer or an authorised distributor.</p></div>
+        <div class="why-card reveal" style="--delay:.1s"><div class="why-icon">🩺</div><h3>A pharmacist answers</h3><p>Questions about dosage or interactions get a trained answer, not a script.</p></div>
+        <div class="why-card reveal" style="--delay:.2s"><div class="why-icon">⚡</div><h3>Same-day, most days</h3><p>Orders confirmed before mid-afternoon are usually out the door the same day.</p></div>
+        <div class="why-card reveal" style="--delay:.3s"><div class="why-icon">📱</div><h3>WhatsApp-first</h3><p>No app, no account — message the product name and get a price back.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="faq" class="section-navy">
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center; max-width:640px; margin-left:auto; margin-right:auto;">
+        <span class="kicker" style="justify-content:center;">How it works</span>
+        <h2>Three steps. <em>No</em> app required.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="proc-step reveal" style="--delay:0s"><div class="proc-num">01</div><h3>Message us</h3><p>Send the item name on WhatsApp — even if it's not listed here.</p></div>
+        <div class="proc-step reveal" style="--delay:.1s"><div class="proc-num">02</div><h3>Get a price</h3><p>We confirm availability and quote directly, before you commit to anything.</p></div>
+        <div class="proc-step reveal" style="--delay:.2s"><div class="proc-num">03</div><h3>Collect or deliver</h3><p>Pick it up at the counter, or have it delivered — your call.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section-cream">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="kicker">Before you ask</span>
-        <h2>Common questions, answered plainly.</h2>
+        <h2>Common questions, answered <em>plainly</em>.</h2>
       </div>
-      <div class="faq-list reveal">
+      <div class="faq-list reveal" style="max-width:100%;">
         <div class="faq-item">
           <button class="faq-q">Can't find an item on the list?<span class="faq-plus">+</span></button>
           <div class="faq-a"><p>This catalog reflects current listed stock — new batches come in regularly. Message the exact name and we'll confirm within the day.</p></div>
@@ -192,20 +199,20 @@
         <p>A full-service pharmacy counter, digitised — genuine stock, straightforward pricing, and a real person on the other end.</p>
       </div>
       <div class="footer-col">
-        <h4>Visit</h4>
-        <span>Tehsil Rd, Block-D</span>
-        <span>56300, Pakistan</span>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop All</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col" id="footerCategories">
+        <h4>Categories</h4>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="https://wa.me/923200202202" target="_blank" rel="noopener noreferrer">+92 320 0202202</a>
         <a href="mailto:ebsons@ebsons.com.pk">ebsons@ebsons.com.pk</a>
-      </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <a href="#featured">Bestsellers</a>
-        <a href="#shop">Full catalog</a>
-        <a href="#brands">Brands</a>
+        <span>Tehsil Rd, Block-D, Okara</span>
       </div>
     </div>
     <div class="footer-bottom">
@@ -218,6 +225,8 @@
 <a class="wa-float" href="https://wa.me/923200202202" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
   <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s1 2.5 1.1 2.6c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Z"/></svg>
 </a>
-<script src="assets/js/app.js"></script>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/home.js"></script>
 </body>
 </html>

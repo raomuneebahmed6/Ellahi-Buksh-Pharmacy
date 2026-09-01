@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "medicines",
+    "label": "Medicines",
+    "monogram": "MD",
+    "tag": "General",
+    "desc": "Prescription and over-the-counter medicines, genuine and sourced directly.",
+    "gradient": [
+      "var(--navy)",
+      "var(--navy-2)"
+    ],
+    "count": 83
+  },
+  {
+    "slug": "skincare",
+    "label": "Skincare",
+    "monogram": "SK",
+    "tag": "Dermatology",
+    "desc": "Creams, serums, whitening treatments and sun protection for every skin type.",
+    "gradient": [
+      "var(--amber)",
+      "#c97a12"
+    ],
+    "count": 30
+  },
+  {
+    "slug": "vitamins-supplements",
+    "label": "Vitamins & Supplements",
+    "monogram": "VT",
+    "tag": "Nutrition",
+    "desc": "Multivitamins, minerals and supplements for daily and targeted needs.",
+    "gradient": [
+      "var(--good)",
+      "#0f5a3a"
+    ],
+    "count": 14
+  },
+  {
+    "slug": "devices",
+    "label": "Devices",
+    "monogram": "DV",
+    "tag": "Medical equipment",
+    "desc": "BP monitors, glucometers, thermometers and home diagnostic devices.",
+    "gradient": [
+      "var(--navy-2)",
+      "var(--navy-3)"
+    ],
+    "count": 11
+  },
+  {
+    "slug": "hair-care",
+    "label": "Hair Care",
+    "monogram": "HC",
+    "tag": "Treatment",
+    "desc": "Hair growth solutions, treatments and scalp care formulas.",
+    "gradient": [
+      "var(--red)",
+      "var(--red-2)"
+    ],
+    "count": 10
+  },
+  {
+    "slug": "mother-baby",
+    "label": "Mother & Baby",
+    "monogram": "MB",
+    "tag": "Family care",
+    "desc": "Trusted essentials for new mothers and infants.",
+    "gradient": [
+      "var(--amber)",
+      "var(--red)"
+    ],
+    "count": 1
+  },
+  {
+    "slug": "diabetic-care",
+    "label": "Diabetic Care",
+    "monogram": "DC",
+    "tag": "Chronic care",
+    "desc": "Insulin delivery devices and diabetic management supplies.",
+    "gradient": [
+      "var(--red-2)",
+      "#8a0f1f"
+    ],
+    "count": 1
+  }
+]
