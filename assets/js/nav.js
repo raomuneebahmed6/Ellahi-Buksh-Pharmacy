@@ -9,12 +9,37 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// The mobile drawer is positioned fixed below the header, whose height
+// changes across breakpoints (logo shrinks, WhatsApp icon hides) — reading
+// the real height avoids a hardcoded top offset drifting out of sync.
+function updateHeaderHeight() {
+  const header = document.querySelector('.site-header');
+  if (header) document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+}
+updateHeaderHeight();
+window.addEventListener('resize', updateHeaderHeight);
+
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const mainNav = document.getElementById('mainNav');
 if (hamburgerBtn && mainNav) {
   hamburgerBtn.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
-    hamburgerBtn.classList.toggle('open');
+    const isOpen = mainNav.classList.toggle('open');
+    hamburgerBtn.classList.toggle('open', isOpen);
+    if (!isOpen) mainNav.querySelector('.nav-dropdown')?.classList.remove('open');
+  });
+}
+
+// On mobile the "Products" link doubles as an accordion trigger — tapping it
+// expands the category list in place instead of navigating away, since the
+// dropdown only opens on hover on desktop.
+const navDropdown = mainNav?.querySelector('.nav-dropdown');
+const navDropdownTrigger = navDropdown?.querySelector(':scope > a');
+if (navDropdown && navDropdownTrigger) {
+  navDropdownTrigger.addEventListener('click', (e) => {
+    if (window.matchMedia('(max-width:820px)').matches) {
+      e.preventDefault();
+      navDropdown.classList.toggle('open');
+    }
   });
 }
 

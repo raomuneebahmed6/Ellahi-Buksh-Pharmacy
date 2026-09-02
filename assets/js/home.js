@@ -37,6 +37,7 @@ function renderFeatured(featured) {
       </div>
       <div class="product-body">
         <h3>${p.title}</h3>
+        <p class="product-desc">Genuine stock, sourced directly from ${p.vendor}.</p>
         <div class="product-foot">
           <span class="product-price">${fmtPrice(p.price)}</span>
           <button class="mini-add-to-cart" data-add-to-cart data-title="${p.title.replace(/"/g, '&quot;')}" data-vendor="${p.vendor.replace(/"/g, '&quot;')}" data-price="${p.price}" aria-label="Add ${p.title} to cart">
